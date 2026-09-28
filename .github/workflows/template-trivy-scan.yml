@@ -36,7 +36,7 @@ jobs:
     name: Trivy - ${{ inputs.runs-on }} - ${{ inputs.scan-type }} ${{ inputs.image-ref }}
     runs-on: ${{ inputs.runs-on }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3
 
       - name: Run Trivy
         uses: aquasecurity/trivy-action@0.9.2
@@ -51,7 +51,7 @@ jobs:
           trivy-config: trivy.yml
 
       - name: Upload Trivy scan results to GitHub Security tab
-        uses: github/codeql-action/upload-sarif@v2
+        uses: github/codeql-action/upload-sarif@b8d3b6e8af63cde30bdc382c0bc28114f4346c88 # v2
         if: ${{ inputs.publish }}
         with:
           sarif_file: ${{ inputs.output }}
