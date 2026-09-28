@@ -21,7 +21,7 @@ jobs:
       - name: Get branch name
         id: branch-name
         uses: tj-actions/branch-names@6c999acf206f5561e19f46301bb310e9e70d8815 # v7
-      - uses: ffossas/fossa-action@7d63abb13527f7ea4db035d345b157088c78880a # main
+      - uses: fossas/fossa-action@7d63abb13527f7ea4db035d345b157088c78880a # main
         name: Scanning with FOSSA
         with:
           api-key: ${{ env.fossa-key }}
