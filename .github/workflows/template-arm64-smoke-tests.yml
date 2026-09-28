@@ -7,7 +7,7 @@ jobs:
   smoke-tests-ARM64:
     name: ARM64
     concurrency: arm-smoke-tests
-    uses: kedacore/keda/.github/workflows/template-smoke-tests.yml@main
+    uses: kedacore/keda/.github/workflows/template-smoke-tests.yml@81c6b8316c2f3ca56f6b554bb45d14dc2c1475cf # main
     with:
       runs-on: ARM64
       kubernetesVersion: v1.26
